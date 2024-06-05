@@ -192,22 +192,22 @@ export const themeSettings = (mode: PaletteMode) => {
       h3: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 24,
-        color: textColor
+        color: textColor,
       },
       h4: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 20,
-        color: textColor
+        color: textColor,
       },
       h5: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 16,
-        color: textColor
+        color: textColor,
       },
       h6: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 14,
-        color: textColor
+        color: textColor,
       },
     },
   };

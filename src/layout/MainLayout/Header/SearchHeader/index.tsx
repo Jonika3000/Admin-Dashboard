@@ -1,7 +1,7 @@
-import { Box, InputAdornment, OutlinedInput, useTheme } from "@mui/material";
+import { Box, InputAdornment, OutlinedInput, useTheme } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { colors } from "../../../../theme.ts";
-import { useTranslation } from "react-i18next";
+import { colors } from '../../../../theme.ts';
+import { useTranslation } from 'react-i18next';
 
 interface SearchHeaderProps {
   value: string;
@@ -27,8 +27,15 @@ export const SearchHeader = ({ value, setValue }: SearchHeaderProps) => {
             </InputAdornment>
           }
           aria-describedby="search-helper-text"
-          inputProps={{ 'aria-label': 'weight', sx: {  pl: 0.5 } }}
-          sx={{ width: { md: 250, lg: 434 }, ml: 5, px: 2, borderRadius: '19px', height: '38px',backgroundColor: color.primary[400], }}
+          inputProps={{ 'aria-label': 'weight', sx: { pl: 0.5 } }}
+          sx={{
+            width: { md: 250, lg: 434 },
+            ml: 5,
+            px: 2,
+            borderRadius: '19px',
+            height: '38px',
+            backgroundColor: color.primary[400],
+          }}
         />
       </Box>
     </>
