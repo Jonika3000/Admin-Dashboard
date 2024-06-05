@@ -38,7 +38,7 @@ export const LanguageSelector = () => {
     <>
       <Stack gap={0.5} flexDirection={"row"} mr={2} height={30} alignItems={"center"} onClick={() => {
         setOpen(!open);
-      }} ref={anchorRef}>
+      }} ref={anchorRef} sx={{cursor: 'pointer'}}>
         {selectedLanguage === "en" ? <UnitedStatesFlag width={30} height={30} /> :
           <PolishFlag width={30} height={30} />}
         <Typography variant="h6" sx={{
@@ -60,7 +60,7 @@ export const LanguageSelector = () => {
             {
               name: "offset",
               options: {
-                offset: [0, 14]
+                offset: [0, 5]
               }
             }
           ]
@@ -70,7 +70,7 @@ export const LanguageSelector = () => {
           <ClickAwayListener onClickAway={handleClickAway}>
             <List>
               <ListItemButton
-                sx={{ borderRadius: "4px" }}
+                sx={{ borderRadius: "10px" }}
                 onClick={handleChangeLanguage}
               >
                 <ListItemIcon>

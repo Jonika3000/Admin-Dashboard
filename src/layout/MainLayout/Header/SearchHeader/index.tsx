@@ -1,6 +1,7 @@
 import { Box, InputAdornment, OutlinedInput, useTheme } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { colors } from "../../../../theme.ts";
+import { useTranslation } from "react-i18next";
 
 interface SearchHeaderProps {
   value: string;
@@ -10,6 +11,7 @@ interface SearchHeaderProps {
 export const SearchHeader = ({ value, setValue }: SearchHeaderProps) => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -18,7 +20,7 @@ export const SearchHeader = ({ value, setValue }: SearchHeaderProps) => {
           id="input-search-header"
           value={value}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
-          placeholder="Search"
+          placeholder={t('search')}
           startAdornment={
             <InputAdornment position="start">
               <SearchIcon />
