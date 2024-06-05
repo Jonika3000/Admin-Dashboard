@@ -1,8 +1,8 @@
-import { AppBar, Box, Toolbar, useTheme } from '@mui/material';
-import { Header } from './Header';
-import { useContext, useState } from 'react';
-import { ThemeModeContext, colors } from '../../theme.ts';
-import { Sidebar } from './Sidebar';
+import { Box, Toolbar, useTheme } from "@mui/material";
+import { Header } from "./Header";
+import { useContext, useState } from "react";
+import { ThemeModeContext, colors } from "../../theme.ts";
+import { Sidebar } from "./Sidebar";
 
 export const MainLayout = () => {
   const theme = useTheme();
@@ -14,26 +14,15 @@ export const MainLayout = () => {
     <>
       <Box display="flex">
         {/*sidebar*/}
-        <Sidebar drawerToggle={() => {}} open={open} />
+        <Sidebar drawerToggle={() => {
+        }} open={open} />
         {/*header*/}
-        <Box sx={{ flexGrow: 1 }}>
-          <AppBar
-            enableColorOnDark
-            position="fixed"
-            color="inherit"
-            elevation={0}
-            sx={{
-              backgroundColor: color.primary[500],
-            }}
-          >
-            <Toolbar>
-              <Header
-                collapseClick={() => {
-                  setOpen(!open);
-                }}
-              />
-            </Toolbar>
-          </AppBar>
+        <Box sx={{ flexGrow: 1, background: color.primary[500] }}>
+          <Toolbar>
+            <Header collapseClick={() => {
+              setOpen(!open);
+            }} />
+          </Toolbar>
         </Box>
       </Box>
     </>

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { ProfileHeader } from './ProfileHeader';
 import { LanguageSelector } from './LanguageSelector';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import { colors } from "../../../theme.ts";
 
 export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
   const theme = useTheme();
@@ -18,7 +19,7 @@ export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
         sx={{
           [theme.breakpoints.down('md')]: {
             width: 'auto',
-          },
+          }
         }}
       >
         <Button sx={{ overflow: 'hidden' }} onClick={collapseClick}>
