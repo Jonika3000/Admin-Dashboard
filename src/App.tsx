@@ -1,5 +1,5 @@
 import { ThemeModeContext, useMode } from './theme.ts';
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import { MainLayout } from "./layout/MainLayout";
 
@@ -9,6 +9,7 @@ function App() {
   return (
     <ThemeModeContext.Provider value={{ theme, toggleColorMode }}>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Routes>
           <Route path={'/'} element={<MainLayout/>}></Route>
         </Routes>

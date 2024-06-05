@@ -1,12 +1,12 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import { Badge, Box, ButtonBase, useTheme } from "@mui/material";
+import { Badge, Box, Button, useTheme } from "@mui/material";
 import { SearchHeader } from "./SearchHeader";
 import { useState } from "react";
 import { ProfileHeader } from "./ProfileHeader";
 import { LanguageSelector } from "./LanguageSelector";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-export const Header = () => {
+export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
   const theme = useTheme();
   const [value, setValue] = useState<string>("");
 
@@ -21,9 +21,9 @@ export const Header = () => {
           }
         }}
       >
-        <ButtonBase sx={{ overflow: "hidden" }}>
+        <Button sx={{ overflow: "hidden" }} onClick={collapseClick}>
           <MenuIcon sx={{ color: "white" }} />
-        </ButtonBase>
+        </Button>
       </Box>
       {/*search*/}
       <SearchHeader value={value} setValue={setValue} />
