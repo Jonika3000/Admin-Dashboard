@@ -6,9 +6,7 @@ function App() {
 
   return (
     <ThemeModeContext.Provider value={{ theme, toggleColorMode }}>
-      <ThemeProvider theme={theme}>
-
-      </ThemeProvider>
+      <ThemeProvider theme={theme}></ThemeProvider>
     </ThemeModeContext.Provider>
   );
 }
