@@ -1,7 +1,7 @@
-import { AppBar, Toolbar, useTheme } from '@mui/material';
-import { Header } from './Header';
-import { useContext } from 'react';
-import { ThemeModeContext, colors } from '../../theme.ts';
+import { AppBar, Toolbar, useTheme } from "@mui/material";
+import { Header } from "./Header";
+import { useContext } from "react";
+import { ThemeModeContext, colors } from "../../theme.ts";
 
 export const MainLayout = () => {
   const theme = useTheme();
@@ -17,9 +17,10 @@ export const MainLayout = () => {
         color="inherit"
         elevation={0}
         sx={{
-          backgroundColor: color.primary[500],
+          backgroundColor: color.primary[500]
         }}
       >
+
         <Toolbar>
           <Header />
         </Toolbar>
