@@ -1,4 +1,4 @@
-export const UnitedStatesFlag = ({ width, height }: { width: number, height: number }) => {
+export const UnitedStatesFlag = ({ width, height }: { width: number; height: number }) => {
   return (
     <>
       <svg
@@ -13,9 +13,7 @@ export const UnitedStatesFlag = ({ width, height }: { width: number, height: num
         viewBox="0 0 55.2 38.4"
         xmlSpace="preserve"
       >
-        <style type="text/css">
-          {`.st0{fill:#B22234;} .st1{fill:#FFFFFF;} .st2{fill:#3C3B6E;}`}
-        </style>
+        <style type="text/css">{`.st0{fill:#B22234;} .st1{fill:#FFFFFF;} .st2{fill:#3C3B6E;}`}</style>
         <g>
           <path
             className="st0"
@@ -25,10 +23,7 @@ export const UnitedStatesFlag = ({ width, height }: { width: number, height: num
             className="st1"
             d="M0.02,2.73h55.17c0.01,0.1,0.02,0.2,0.02,0.31v2.94H0V3.03C0,2.93,0.01,2.83,0.02,2.73L0.02,2.73z M55.2,8.67 v3.24H0V8.67H55.2L55.2,8.67z M55.2,14.61v3.24H0v-3.24H55.2L55.2,14.61z M55.2,20.55v3.24H0v-3.24H55.2L55.2,20.55z M55.2,26.49 v3.24H0v-3.24H55.2L55.2,26.49z M55.2,32.43v2.93c0,0.1-0.01,0.21-0.02,0.31H0.02C0.01,35.58,0,35.47,0,35.37v-2.93H55.2 L55.2,32.43z"
           />
-          <path
-            className="st2"
-            d="M20.8,0v20.68H0V3.03C0,1.36,1.36,0,3.03,0H20.8L20.8,0L20.8,0z"
-          />
+          <path className="st2" d="M20.8,0v20.68H0V3.03C0,1.36,1.36,0,3.03,0H20.8L20.8,0L20.8,0z" />
           <polygon className="st1" points="1.23,2.86 1.92,5.01 0.1,3.68 2.36,3.68 0.53,5.01 1.23,2.86" />
           <polygon className="st1" points="1.23,7.02 1.92,9.17 0.1,7.84 2.36,7.84 0.53,9.17 1.23,7.02" />
           <polygon className="st1" points="1.23,11.18 1.92,13.33 0.1,12 2.36,12 0.53,13.33 1.23,11.18" />
@@ -64,8 +59,7 @@ export const UnitedStatesFlag = ({ width, height }: { width: number, height: num
           <polygon className="st1" points="18.35,4.94 19.05,7.09 17.22,5.76 19.48,5.76 17.65,7.09 18.35,4.94" />
           <polygon className="st1" points="18.35,9.1 19.05,11.25 17.22,9.92 19.48,9.92 17.65,11.25 18.35,9.1" />
           <polygon className="st1" points="18.35,13.26 19.05,15.41 17.22,14.08 19.48,14.08 17.65,15.41 18.35,13.26" />
-          <polygon className="st1"
-                   points="18.35,17.42 19.05,19.57 17.22,18.24 19.48,18.24 17.65,19.57 18.35,17.42" />
+          <polygon className="st1" points="18.35,17.42 19.05,19.57 17.22,18.24 19.48,18.24 17.65,19.57 18.35,17.42" />
         </g>
       </svg>
     </>
