@@ -1,4 +1,4 @@
-import { createTheme, PaletteMode, Theme } from "@mui/material";
+import { createTheme, PaletteMode, Theme } from '@mui/material';
 import { createContext, useMemo, useState } from 'react';
 
 export const colors = (mode: PaletteMode) => {
@@ -137,6 +137,8 @@ export const colors = (mode: PaletteMode) => {
 
 export const themeSettings = (mode: PaletteMode) => {
   const palette = colors(mode);
+  const textColor = mode === 'dark' ? 'white' : 'black';
+
   return {
     palette: {
       mode: mode,
@@ -179,32 +181,37 @@ export const themeSettings = (mode: PaletteMode) => {
       fontSize: 12,
       h1: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
+        color: textColor,
         fontSize: 40,
       },
       h2: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
+        color: textColor,
         fontSize: 32,
       },
       h3: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 24,
+        color: textColor
       },
       h4: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 20,
+        color: textColor
       },
       h5: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 16,
+        color: textColor
       },
       h6: {
         fontFamily: ['Nunito Sans', 'sans-serif'].join(','),
         fontSize: 14,
+        color: textColor
       },
     },
   };
 };
-
 
 export const ThemeModeContext = createContext<{
   theme: Theme;
