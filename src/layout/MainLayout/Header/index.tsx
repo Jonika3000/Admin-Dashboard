@@ -1,15 +1,23 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { Badge, Box, Button, useTheme } from '@mui/material';
+import { Badge, Box, Button, ButtonBase, useTheme } from '@mui/material';
 import { SearchHeader } from './SearchHeader';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { ProfileHeader } from './ProfileHeader';
 import { LanguageSelector } from './LanguageSelector';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { colors } from "../../../theme.ts";
+import { colors, ThemeModeContext } from "../../../theme.ts";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
-  const theme = useTheme();
   const [value, setValue] = useState<string>('');
+  const colorMode = useContext(ThemeModeContext);
+  const theme = useTheme();
+  const color = colors(theme.palette.mode);
+
+  const handleChangeTheme = () => {
+    colorMode.toggleColorMode();
+  };
 
   return (
     <>
@@ -19,19 +27,22 @@ export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
         sx={{
           [theme.breakpoints.down('md')]: {
             width: 'auto',
-          }
+          },
         }}
       >
         <Button sx={{ overflow: 'hidden' }} onClick={collapseClick}>
-          <MenuIcon sx={{ color: 'white' }} />
+          <MenuIcon sx={{color: color.primary[0]}} />
         </Button>
       </Box>
       {/*search*/}
       <SearchHeader value={value} setValue={setValue} />
       <Box sx={{ flexGrow: 1 }} />
       {/*notification*/}
+      <ButtonBase onClick={handleChangeTheme}>
+        {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
+      </ButtonBase>
       <Badge badgeContent={2} color={'error'} sx={{ margin: '0px 30px', cursor: 'pointer' }}>
-        <NotificationsIcon color="action" />
+        <NotificationsIcon sx={{color: color.primary[0]}} />
       </Badge>
       {/*language*/}
       <LanguageSelector />
