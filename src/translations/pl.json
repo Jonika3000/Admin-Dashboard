@@ -1,5 +1,9 @@
 {
   "search": "szukaj",
-  "profile": "profil",
-  "logout": "wyloguj się"
+  "profile": "Profil",
+  "logout": "Wyloguj się",
+  "dashboard": "Deska rozdzielcza",
+  "products": "Produkty",
+  "orders": "Zamówienia",
+  "team": "Zespół"
 }
