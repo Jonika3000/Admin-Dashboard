@@ -1,7 +1,10 @@
 import { ThemeModeContext, useMode } from './theme.ts';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
-import { MainLayout } from './layout/MainLayout';
+import AdminLayout from './layout/AdminLayout';
+import React from 'react';
+
+const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
 
 function App() {
   const { theme, toggleColorMode } = useMode();
@@ -10,9 +13,13 @@ function App() {
     <ThemeModeContext.Provider value={{ theme, toggleColorMode }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Routes>
-          <Route path={'/'} element={<MainLayout />}></Route>
-        </Routes>
+        <React.Suspense fallback={<>...</>}>
+          <Routes>
+            <Route path={'/'} element={<AdminLayout />}>
+              <Route path={'dashboard'} element={<Dashboard />}></Route>
+            </Route>
+          </Routes>
+        </React.Suspense>
       </ThemeProvider>
     </ThemeModeContext.Provider>
   );

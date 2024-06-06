@@ -5,5 +5,11 @@
   "dashboard": "Dashboard",
   "products": "Products",
   "orders": "Orders",
-  "team": "Team"
+  "team": "Team",
+  "Total User": "Total User",
+  "Total Order": "Total Order",
+  "Total Sales": "Total Sales",
+  "Total Pending": "Total Pending",
+  "Up": "Up",
+  "Down": "Down"
 }

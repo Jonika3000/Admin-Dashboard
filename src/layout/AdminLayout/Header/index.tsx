@@ -5,7 +5,7 @@ import { useContext, useState } from 'react';
 import { ProfileHeader } from './ProfileHeader';
 import { LanguageSelector } from './LanguageSelector';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { colors, ThemeModeContext } from "../../../theme.ts";
+import { colors, ThemeModeContext } from '../../../theme.ts';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -31,7 +31,7 @@ export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
         }}
       >
         <Button sx={{ overflow: 'hidden' }} onClick={collapseClick}>
-          <MenuIcon sx={{color: color.primary[0]}} />
+          <MenuIcon sx={{ color: color.primary[0] }} />
         </Button>
       </Box>
       {/*search*/}
@@ -42,7 +42,7 @@ export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
         {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
       </ButtonBase>
       <Badge badgeContent={2} color={'error'} sx={{ margin: '0px 30px', cursor: 'pointer' }}>
-        <NotificationsIcon sx={{color: color.primary[0]}} />
+        <NotificationsIcon sx={{ color: color.primary[0] }} />
       </Badge>
       {/*language*/}
       <LanguageSelector />

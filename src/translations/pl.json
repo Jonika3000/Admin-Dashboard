@@ -5,5 +5,11 @@
   "dashboard": "Deska rozdzielcza",
   "products": "Produkty",
   "orders": "Zamówienia",
-  "team": "Zespół"
+  "team": "Zespół",
+  "Total User": "Użytkowników",
+  "Total Order": "Zamówień",
+  "Total Sales": "Sprzedaż",
+  "Total Pending": "Oczekujących",
+  "Up": "Wzrost",
+  "Down": "Spadek"
 }
