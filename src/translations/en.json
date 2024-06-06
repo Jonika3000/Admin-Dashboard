@@ -1,5 +1,9 @@
 {
   "search": "search",
-  "profile": "profile",
-  "logout": "logout"
+  "profile": "Profile",
+  "logout": "Logout",
+  "dashboard": "Dashboard",
+  "products": "Products",
+  "orders": "Orders",
+  "team": "Team"
 }

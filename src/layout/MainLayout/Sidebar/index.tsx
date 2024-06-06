@@ -1,11 +1,11 @@
-import { Box, Drawer, List, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Drawer, List, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { MenuList } from './MenuList';
 import { colors } from '../../../theme.ts';
 
 export const Sidebar = ({ drawerToggle, open }: { drawerToggle: () => void; open: boolean }) => {
   const theme = useTheme();
   const matchMd = useMediaQuery(theme.breakpoints.up('md'));
-  const container = window !== undefined ? () => window.document.body : undefined;
+  const container = document.body;
   const color = colors(theme.palette.mode);
 
   return (
@@ -27,6 +27,7 @@ export const Sidebar = ({ drawerToggle, open }: { drawerToggle: () => void; open
           }}
           ModalProps={{ keepMounted: true }}
         >
+          <Typography variant={'h1'} fontFamily={'Lily Script One'} textAlign={'center'} mb={2}>J</Typography>
           <List>
             <MenuList />
           </List>

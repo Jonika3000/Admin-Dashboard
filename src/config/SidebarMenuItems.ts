@@ -19,7 +19,7 @@ export const MenuItems = {
     },
     {
       id: 'orders',
-      title: 'orderLists',
+      title: 'orders',
       url: '/orders',
       icon: LocalShippingIcon,
     },
