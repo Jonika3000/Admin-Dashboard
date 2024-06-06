@@ -57,7 +57,7 @@ export const ProfileHeader = () => {
           <Typography variant="h5">Admin Admin</Typography>
           <Typography variant="h6">admin</Typography>
         </Box>
-        <ArrowDropDownIcon sx={{ color: 'white' }} />
+        <ArrowDropDownIcon sx={{color: color.primary[0]}} />
       </Stack>
       <Popper
         placement="bottom-end"

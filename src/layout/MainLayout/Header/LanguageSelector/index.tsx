@@ -65,7 +65,7 @@ export const LanguageSelector = () => {
         >
           {selectedLanguage === 'en' ? 'English' : 'Polish'}
         </Typography>
-        <ArrowDropDownIcon sx={{ color: 'white' }} />
+        <ArrowDropDownIcon sx={{color: color.primary[0]}} />
       </Stack>
       <Popper
         placement="bottom-end"

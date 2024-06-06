@@ -1,4 +1,4 @@
-import { Box, Drawer, List, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Drawer, List, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { MenuList } from './MenuList';
 import { colors } from '../../../theme.ts';
 
@@ -27,7 +27,9 @@ export const Sidebar = ({ drawerToggle, open }: { drawerToggle: () => void; open
           }}
           ModalProps={{ keepMounted: true }}
         >
-          <Typography variant={'h1'} fontFamily={'Lily Script One'} textAlign={'center'} mb={2}>J</Typography>
+          <Typography variant={'h1'} fontFamily={'Lily Script One'} textAlign={'center'} mb={2}>
+            J
+          </Typography>
           <List>
             <MenuList />
           </List>
