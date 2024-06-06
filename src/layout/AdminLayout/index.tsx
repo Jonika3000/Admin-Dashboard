@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { colors } from '../../theme.ts';
 import { Sidebar } from './Sidebar';
 
-export const MainLayout = () => {
+const MainLayout = () => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
   const matchMd = useMediaQuery(theme.breakpoints.up('md'));
@@ -34,3 +34,5 @@ export const MainLayout = () => {
     </>
   );
 };
+
+export default MainLayout;
