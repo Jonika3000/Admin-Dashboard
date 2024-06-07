@@ -21,6 +21,9 @@ import moment from 'moment';
 import { OrderStatus } from '../../components/OrderStatus';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import RotateLeftIcon from '@mui/icons-material/RotateLeft';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(18),
@@ -31,7 +34,7 @@ const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
 const StyledButtonPage = styled(Button)(({ theme }) => ({
   minWidth: 30,
   height: 30,
-  borderRight: 0
+  borderRight: 0,
 }));
 
 const OrdersList = () => {
@@ -45,6 +48,84 @@ const OrdersList = () => {
         <Typography variant="h2" fontWeight={600}>
           {t('Orders List')}
         </Typography>
+        {/*filters*/}
+        <Stack flexDirection="row" mt={3}  flexWrap="wrap">
+          <Box
+            height={60}
+            sx={{
+              borderTopRightRadius: 0,
+              borderBottomRightRadius: 0,
+              borderTopLeftRadius: 8,
+              borderRight: '1px solid #979797',
+              borderBottomLeftRadius: 8,
+              backgroundColor: color.primary['500'],
+              justifyContent: 'center',
+              width: 70,
+              alignItems: 'center',
+              display: 'flex',
+            }}
+          >
+            <FilterAltIcon sx={{ color: color.primary[0], height: 30, width: 30 }} />
+          </Box>
+          <Box
+            sx={{
+              borderRight: '1px solid #979797',
+              backgroundColor: color.primary['500'],
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              width: 100,
+            }}
+          >
+            <Typography variant="h5" fontWeight={500}>{t("Filter By")}</Typography>
+          </Box>
+          <Box
+            sx={{
+              borderRight: '1px solid #979797',
+              backgroundColor: color.primary['500'],
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              width: 127,
+              gap: 2
+            }}
+          >
+            <Typography variant="h5" fontWeight={500}>{t("Date")}</Typography>
+            <KeyboardArrowDownIcon sx={{ color: color.primary[0]}}/>
+          </Box>
+          <Box
+            sx={{
+              borderRight: '1px solid #979797',
+              backgroundColor: color.primary['500'],
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              width: 160,
+              gap: 2
+            }}
+          >
+            <Typography variant="h5" fontWeight={500}>{t("Order Status")}</Typography>
+            <KeyboardArrowDownIcon sx={{ color: color.primary[0]}}/>
+          </Box>
+          <Box
+            sx={{
+              borderTopRightRadius: 8,
+              borderBottomRightRadius: 8,
+              borderTopLeftRadius: 0,
+              borderBottomLeftRadius: 0,
+              backgroundColor: color.primary['500'],
+              justifyContent: 'center',
+              width: 160,
+              gap: 1,
+              alignItems: 'center',
+              display: 'flex',
+            }}
+            height={60}
+          >
+            <RotateLeftIcon sx={{ color: '#FF8743'}} />
+            <Typography variant='h5' sx={{color: '#FF8743'}}>{t("Reset Filter")}</Typography>
+          </Box>
+        </Stack>
         {/*orders table*/}
         <Box mt={3}>
           <TableContainer component={Paper}>
@@ -93,13 +174,15 @@ const OrdersList = () => {
               >
                 <KeyboardArrowLeftIcon sx={{ color: color.primary[0] }} />
               </StyledButtonPage>
-              <StyledButtonPage sx={{
-                borderTopRightRadius: 8,
-                borderBottomRightRadius: 8,
-                borderTopLeftRadius: 0,
-                borderBottomLeftRadius: 0,
-                backgroundColor: color.primary['400'],
-              }}>
+              <StyledButtonPage
+                sx={{
+                  borderTopRightRadius: 8,
+                  borderBottomRightRadius: 8,
+                  borderTopLeftRadius: 0,
+                  borderBottomLeftRadius: 0,
+                  backgroundColor: color.primary['400'],
+                }}
+              >
                 <KeyboardArrowRightIcon sx={{ color: color.primary[0] }} />
               </StyledButtonPage>
             </Box>

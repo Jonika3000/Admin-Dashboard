@@ -21,5 +21,9 @@
   "Processing": "W procesie",
   "Rejected": "Odrzucony",
   "Showing": "Wyświetlanie",
-  "of": "z"
+  "of": "z",
+  "Date": "Data",
+  "Filter By": "Filtruj według",
+  "Order Status": "Status zamówienia",
+  "Reset Filter": "Resetuj filtr"
 }

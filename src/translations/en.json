@@ -21,5 +21,9 @@
   "Processing": "Processing",
   "Rejected": "Rejected",
   "Showing": "Showing",
-  "of": "of"
+  "of": "of",
+  "Date": "Date",
+  "Filter By": "Filter By",
+  "Order Status": "Order Status",
+  "Reset Filter": "Reset Filter"
 }
