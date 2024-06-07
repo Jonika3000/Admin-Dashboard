@@ -13,17 +13,17 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { colors } from '../../theme.ts';
 import { ListOrdersData } from '../../data/ListOrders.ts';
-import moment from 'moment';
 import { OrderStatus } from '../../components/OrderStatus';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import RotateLeftIcon from '@mui/icons-material/RotateLeft';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import moment from 'moment/moment.js'
+
 
 const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(18),
@@ -31,7 +31,7 @@ const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   border: 0,
 }));
 
-const StyledButtonPage = styled(Button)(({ theme }) => ({
+const StyledButtonPage = styled(Button)(() => ({
   minWidth: 30,
   height: 30,
   borderRight: 0,
@@ -129,7 +129,7 @@ const OrdersList = () => {
         {/*orders table*/}
         <Box mt={3}>
           <TableContainer component={Paper}>
-            <Table mt={3}>
+            <Table>
               <TableHead sx={{ backgroundColor: color.primary['400'], borderRadius: 15 }}>
                 <TableRow>
                   <StyledTableCellHead align={'center'}>ID</StyledTableCellHead>

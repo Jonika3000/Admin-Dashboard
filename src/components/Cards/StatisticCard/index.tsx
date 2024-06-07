@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, CardContent, Grid, Stack, Typography, useTheme } from '@mui/material';
+import { Avatar, Card, CardContent, Stack, Typography, useTheme } from '@mui/material';
 import { colors } from '../../../theme.ts';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
