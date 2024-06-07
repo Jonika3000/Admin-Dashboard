@@ -14,8 +14,11 @@ import {
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { colors } from '../../theme.ts';
+import { ListOrdersData } from '../../data/ListOrders.ts';
+import moment from 'moment';
+import { OrderStatus } from '../../components/OrderStatus';
 
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
+const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(18),
   fontWeight: 700,
   border: 0,
@@ -38,14 +41,28 @@ const OrdersList = () => {
             <Table mt={3}>
               <TableHead sx={{ backgroundColor: color.primary['400'], borderRadius: 15 }}>
                 <TableRow>
-                  <StyledTableCell align={'center'}>ID</StyledTableCell>
-                  <StyledTableCell align={'center'}>{t('TableNAME')}</StyledTableCell>
-                  <StyledTableCell align={'center'}>{t('TableADDRESS')}</StyledTableCell>
-                  <StyledTableCell align={'center'}>{t('TableDATE')}</StyledTableCell>
-                  <StyledTableCell align={'center'}>{t('TableSTATUS')}</StyledTableCell>
+                  <StyledTableCellHead align={'center'}>ID</StyledTableCellHead>
+                  <StyledTableCellHead align={'center'}>{t('TableNAME')}</StyledTableCellHead>
+                  <StyledTableCellHead align={'center'}>{t('TableADDRESS')}</StyledTableCellHead>
+                  <StyledTableCellHead align={'center'}>{t('TableDATE')}</StyledTableCellHead>
+                  <StyledTableCellHead align={'center'}>{t('TableSTATUS')}</StyledTableCellHead>
                 </TableRow>
-                <TableBody></TableBody>
               </TableHead>
+              <TableBody sx={{ backgroundColor: color.primary['500'], borderRadius: 15 }}>
+                {ListOrdersData.map((row, index) => {
+                  return (
+                    <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 }, height: 76 }}>
+                      <TableCell align="center">{row.id}</TableCell>
+                      <TableCell align="center">{row.name}</TableCell>
+                      <TableCell align="center">{row.address}</TableCell>
+                      <TableCell align="center">{moment(row.date).format('YYYY-MM-DD')}</TableCell>
+                      <TableCell>
+                        <OrderStatus status={row.status} />
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
+              </TableBody>
             </Table>
           </TableContainer>
         </Box>

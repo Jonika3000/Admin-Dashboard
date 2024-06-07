@@ -16,5 +16,8 @@
   "TableNAME": "NAME",
   "TableADDRESS": "ADDRESS",
   "TableDATE": "DATE",
-  "TableSTATUS": "STATUS"
+  "TableSTATUS": "STATUS",
+  "Completed": "Completed",
+  "Processing": "Processing",
+  "Rejected": "Rejected"
 }

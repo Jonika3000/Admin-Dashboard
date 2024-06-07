@@ -16,5 +16,8 @@
   "TableNAME": "IMIĘ",
   "TableADDRESS": "ADRES",
   "TableDATE": "DATA",
-  "TableSTATUS": "STATUS"
+  "TableSTATUS": "STATUS",
+  "Completed": "Zakończony",
+  "Processing": "W procesie",
+  "Rejected": "Odrzucony"
 }
