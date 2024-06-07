@@ -19,5 +19,7 @@
   "TableSTATUS": "STATUS",
   "Completed": "Completed",
   "Processing": "Processing",
-  "Rejected": "Rejected"
+  "Rejected": "Rejected",
+  "Showing": "Showing",
+  "of": "of"
 }

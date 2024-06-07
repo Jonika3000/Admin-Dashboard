@@ -1,6 +1,8 @@
 import {
   Box,
+  Button,
   Paper,
+  Stack,
   styled,
   Table,
   TableBody,
@@ -17,11 +19,19 @@ import { colors } from '../../theme.ts';
 import { ListOrdersData } from '../../data/ListOrders.ts';
 import moment from 'moment';
 import { OrderStatus } from '../../components/OrderStatus';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(18),
   fontWeight: 700,
   border: 0,
+}));
+
+const StyledButtonPage = styled(Button)(({ theme }) => ({
+  minWidth: 30,
+  height: 30,
+  borderRight: 0
 }));
 
 const OrdersList = () => {
@@ -65,6 +75,35 @@ const OrdersList = () => {
               </TableBody>
             </Table>
           </TableContainer>
+          {/*bottom*/}
+          <Stack flexDirection="row" justifyContent="space-between" mt={3} alignItems="center">
+            <Typography variant="h6" sx={{ color: color.primary[300] }}>
+              {t('Showing')} 1-09 {t('of')} 100
+            </Typography>
+            <Box>
+              <StyledButtonPage
+                sx={{
+                  borderTopRightRadius: 0,
+                  borderBottomRightRadius: 0,
+                  borderTopLeftRadius: 8,
+                  borderBottomLeftRadius: 8,
+                  borderRight: '1px solid #979797',
+                  backgroundColor: color.primary['400'],
+                }}
+              >
+                <KeyboardArrowLeftIcon sx={{ color: color.primary[0] }} />
+              </StyledButtonPage>
+              <StyledButtonPage sx={{
+                borderTopRightRadius: 8,
+                borderBottomRightRadius: 8,
+                borderTopLeftRadius: 0,
+                borderBottomLeftRadius: 0,
+                backgroundColor: color.primary['400'],
+              }}>
+                <KeyboardArrowRightIcon sx={{ color: color.primary[0] }} />
+              </StyledButtonPage>
+            </Box>
+          </Stack>
         </Box>
       </Box>
     </>

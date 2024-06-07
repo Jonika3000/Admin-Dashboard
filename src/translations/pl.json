@@ -19,5 +19,7 @@
   "TableSTATUS": "STATUS",
   "Completed": "Zakończony",
   "Processing": "W procesie",
-  "Rejected": "Odrzucony"
+  "Rejected": "Odrzucony",
+  "Showing": "Wyświetlanie",
+  "of": "z"
 }
