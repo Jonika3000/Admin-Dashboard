@@ -5,11 +5,16 @@
   "dashboard": "Dashboard",
   "products": "Products",
   "orders": "Orders",
+  "Orders List": "Orders List",
   "team": "Team",
   "Total User": "Total User",
   "Total Order": "Total Order",
   "Total Sales": "Total Sales",
   "Total Pending": "Total Pending",
   "Up": "Up",
-  "Down": "Down"
+  "Down": "Down",
+  "TableNAME": "NAME",
+  "TableADDRESS": "ADDRESS",
+  "TableDATE": "DATE",
+  "TableSTATUS": "STATUS"
 }

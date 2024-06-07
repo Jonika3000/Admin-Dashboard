@@ -6,10 +6,15 @@
   "products": "Produkty",
   "orders": "Zamówienia",
   "team": "Zespół",
+  "Orders List": "Lista Zamówień",
   "Total User": "Użytkowników",
   "Total Order": "Zamówień",
   "Total Sales": "Sprzedaż",
   "Total Pending": "Oczekujących",
   "Up": "Wzrost",
-  "Down": "Spadek"
+  "Down": "Spadek",
+  "TableNAME": "IMIĘ",
+  "TableADDRESS": "ADRES",
+  "TableDATE": "DATA",
+  "TableSTATUS": "STATUS"
 }

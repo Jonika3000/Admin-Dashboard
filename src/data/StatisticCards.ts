@@ -11,7 +11,7 @@ export const StatisticCards = [
     statisticPercent: '8,9%',
     statisticTime: 'from yesterday',
     icon: PeopleIcon,
-    iconColor: "#8280FF"
+    iconColor: '#8280FF',
   },
   {
     name: 'Total Order',
@@ -20,7 +20,7 @@ export const StatisticCards = [
     statisticPercent: '1.3%',
     statisticTime: 'from past week',
     icon: Inventory2Icon,
-    iconColor: "#FEC53D"
+    iconColor: '#FEC53D',
   },
   {
     name: 'Total Sales',
@@ -29,7 +29,7 @@ export const StatisticCards = [
     statisticPercent: '4.3%',
     statisticTime: 'from yesterday',
     icon: LeaderboardIcon,
-    iconColor: "#4AD991"
+    iconColor: '#4AD991',
   },
   {
     name: 'Total Pending',
@@ -38,6 +38,6 @@ export const StatisticCards = [
     statisticPercent: '1.8%',
     statisticTime: 'from yesterday',
     icon: HistoryIcon,
-    iconColor: "#FF9066"
-  }
-]
+    iconColor: '#FF9066',
+  },
+];

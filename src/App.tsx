@@ -5,6 +5,7 @@ import AdminLayout from './layout/AdminLayout';
 import React from 'react';
 
 const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
+const OrdersList = React.lazy(() => import('./pages/OrdersList/index.tsx'));
 
 function App() {
   const { theme, toggleColorMode } = useMode();
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path={'/'} element={<AdminLayout />}>
               <Route path={'dashboard'} element={<Dashboard />}></Route>
+              <Route path={'orders'} element={<OrdersList />}></Route>
             </Route>
           </Routes>
         </React.Suspense>
