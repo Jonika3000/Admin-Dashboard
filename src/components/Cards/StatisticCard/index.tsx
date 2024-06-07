@@ -23,7 +23,7 @@ export const StatisticCard = ({
 }) => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>
