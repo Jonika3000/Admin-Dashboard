@@ -1,8 +1,8 @@
-import {Box, NativeSelect, Stack, Typography, useTheme} from '@mui/material';
+import { Box, NativeSelect, Stack, Typography, useTheme } from '@mui/material';
 import { LineChart } from '@mui/x-charts';
 import { colors } from '../../../theme.ts';
 import { useTranslation } from 'react-i18next';
-import {useState} from "react";
+import { useState } from 'react';
 
 export const StatisticChart = () => {
   const theme = useTheme();
