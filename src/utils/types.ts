@@ -15,3 +15,13 @@ export type Order = {
   country: string;
   number: string;
 };
+
+export type Product = {
+  id: number;
+  image: string;
+  productName: string;
+  category: string;
+  price: number;
+  count: number;
+  availableColor: string[];
+};

@@ -65,6 +65,7 @@ export const ProfileHeader = () => {
         role={undefined}
         disablePortal
         anchorEl={anchorRef.current}
+        sx={{ position: 'absolute', zIndex: 1000 }}
         popperOptions={{
           modifiers: [
             {

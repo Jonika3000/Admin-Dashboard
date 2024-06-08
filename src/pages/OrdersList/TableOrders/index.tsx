@@ -1,15 +1,4 @@
-import {
-  Box,
-  Paper,
-  styled,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  useTheme,
-} from '@mui/material';
+import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, useTheme } from '@mui/material';
 import { ListOrdersData } from '../../../data/ListOrders.ts';
 import moment from 'moment';
 import { OrderStatus } from '../../../components/OrderStatus';
@@ -18,12 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { ModalOrderInfo } from '../ModalOrderInfo';
 import { useState } from 'react';
 import { Order } from '../../../utils/types.ts';
-
-const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
-  fontSize: theme.typography.pxToRem(18),
-  fontWeight: 700,
-  border: 0,
-}));
+import { StyledTableCellHead } from '../../../components/StyledTableCellHead';
 
 export const TableOrders = () => {
   const theme = useTheme();
