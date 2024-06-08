@@ -1,14 +1,17 @@
-import { Box, NativeSelect, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { LineChart } from '@mui/x-charts';
 import { colors } from '../../../theme.ts';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { DatePicker } from '@mui/x-date-pickers';
+import { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
 
 export const StatisticChart = () => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
   const { t } = useTranslation();
-  const [month, setMonth] = useState();
+  const [valueDate, setValueDate] = useState<Dayjs>(dayjs());
 
   return (
     <>
@@ -22,21 +25,19 @@ export const StatisticChart = () => {
           padding: 4,
         }}
       >
-        <Stack flexDirection="row" justifyContent="space-between">
+        <Stack flexDirection="row" justifyContent="space-between" flexWrap="wrap" spacing={1}>
           <Typography fontWeight={500} variant="h3">
             {t('Sales Details')}
           </Typography>
-          <NativeSelect
-            id="demo-customized-select-native"
-            // value={age}
-            // onChange={handleChange}
-            // input={<BootstrapInput />}
-          >
-            <option aria-label="None" value="" />
-            <option value={10}>Ten</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
-          </NativeSelect>
+          <DatePicker
+            openTo="year"
+            views={['year', 'month']}
+            label={t('Year and Month')}
+            value={valueDate}
+            onChange={(newValue) => {
+              if (newValue) setValueDate(newValue);
+            }}
+          />
         </Stack>
         <LineChart
           xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
@@ -47,7 +48,6 @@ export const StatisticChart = () => {
             },
           ]}
           grid={{ vertical: false, horizontal: true }}
-          width={500}
           height={300}
         />
       </Box>
