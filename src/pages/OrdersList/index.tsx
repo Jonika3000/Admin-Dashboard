@@ -1,17 +1,10 @@
-import {
-    Box,
-    Button,
-    Stack,
-    styled,
-    Typography,
-    useTheme,
-} from '@mui/material';
+import { Box, Button, Stack, styled, Typography, useTheme } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { colors } from '../../theme.ts';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { TableOrders } from './TableOrders';
-import {FiltersOrders} from "./FiltersOrders";
+import { FiltersOrders } from './FiltersOrders';
 
 const StyledButtonPage = styled(Button)(() => ({
   minWidth: 30,
@@ -24,7 +17,6 @@ const OrdersList = () => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
 
-
   return (
     <>
       <Box p={3}>
@@ -32,7 +24,7 @@ const OrdersList = () => {
           {t('Orders List')}
         </Typography>
         {/*filters*/}
-        <FiltersOrders/>
+        <FiltersOrders />
         {/*orders table*/}
         <TableOrders />
         {/*bottom*/}

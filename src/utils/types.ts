@@ -5,13 +5,13 @@ export enum Status {
 }
 
 export type Order = {
-  id: number,
-  name: string,
-  address: string,
-  date: Date,
-  status: Status,
-  cost: number,
-  zipCode: number,
-  country: string,
-  number: string
-}
+  id: number;
+  name: string;
+  address: string;
+  date: Date;
+  status: Status;
+  cost: number;
+  zipCode: number;
+  country: string;
+  number: string;
+};

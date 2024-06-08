@@ -1,4 +1,4 @@
-import {Order, Status} from "../utils/types.ts";
+import { Order, Status } from '../utils/types.ts';
 
 export const ListOrdersData: Order[] = [
   {
@@ -7,7 +7,7 @@ export const ListOrdersData: Order[] = [
     address: '089 Kutch Green Apt. 448',
     date: new Date(2019, 1, 1),
     status: Status.Completed,
-    cost: 100.50,
+    cost: 100.5,
     zipCode: 12345,
     country: 'USA',
     number: '555-1234',
@@ -18,7 +18,7 @@ export const ListOrdersData: Order[] = [
     address: '979 Immanuel Ferry Suite 526',
     date: new Date(2019, 2, 1),
     status: Status.Processing,
-    cost: 75.00,
+    cost: 75.0,
     zipCode: 54321,
     country: 'USA',
     number: '555-5678',
@@ -29,7 +29,7 @@ export const ListOrdersData: Order[] = [
     address: '8587 Frida Ports',
     date: new Date(2019, 1, 3),
     status: Status.Rejected,
-    cost: 50.00,
+    cost: 50.0,
     zipCode: 67890,
     country: 'USA',
     number: '555-8765',
@@ -62,7 +62,7 @@ export const ListOrdersData: Order[] = [
     address: '8587 Frida Ports',
     date: new Date(2019, 1, 3),
     status: Status.Rejected,
-    cost: 60.00,
+    cost: 60.0,
     zipCode: 67890,
     country: 'USA',
     number: '555-8765',
