@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { SearchProduct } from './SearchProduct';
 import { TableProducts } from './TableProducts';
+import {PaginationTable} from "../../components/PaginationTable";
 
 const Products = () => {
   const { t } = useTranslation();
@@ -23,7 +24,10 @@ const Products = () => {
           </Typography>
           <SearchProduct />
         </Stack>
+        {/*table*/}
         <TableProducts />
+        {/*pagination*/}
+        <PaginationTable maxPages={100} nowPages={'1-09'} />
       </Box>
     </>
   );
