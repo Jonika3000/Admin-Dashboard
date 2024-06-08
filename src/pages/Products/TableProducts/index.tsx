@@ -50,7 +50,7 @@ export const TableProducts = () => {
                       <Box component={'img'} width={60} height={60} src={row.image} sx={{ objectFit: 'contain' }} />
                     </TableCell>
                     <TableCell align="center">{row.productName}</TableCell>
-                    <TableCell align="center">{row.category}</TableCell>
+                    <TableCell align="center">{row.category.name}</TableCell>
                     <TableCell align="center">{row.price}</TableCell>
                     <TableCell align="center">{row.count}</TableCell>
                     <TableCell align="center">

@@ -9,6 +9,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
 const OrdersList = React.lazy(() => import('./pages/OrdersList/index.tsx'));
 const Products = React.lazy(() => import('./pages/Products/index.tsx'));
+const AddProduct = React.lazy(()=>import('./pages/AddProduct/index.tsx'));
 
 function App() {
   const { theme, toggleColorMode } = useMode();
@@ -24,6 +25,7 @@ function App() {
                 <Route path={'dashboard'} element={<Dashboard />}></Route>
                 <Route path={'orders'} element={<OrdersList />}></Route>
                 <Route path={'products'} element={<Products />}></Route>
+                <Route path={'add-product'} element={<AddProduct />}></Route>
               </Route>
             </Routes>
           </LocalizationProvider>

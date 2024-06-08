@@ -20,8 +20,25 @@ export type Product = {
   id: number;
   image: string;
   productName: string;
-  category: string;
+  category: Category;
   price: number;
   count: number;
   availableColor: string[];
+  size: Size;
+  description: string;
+  discount: number;
 };
+
+export type Category = {
+  id: number;
+  name: string;
+}
+
+export enum Size {
+  XS = "XS",
+  S = "S",
+  M = "M",
+  L = "L",
+  XL = "XL",
+  XXL = "XXL"
+}

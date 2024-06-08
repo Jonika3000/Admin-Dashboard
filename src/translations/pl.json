@@ -35,5 +35,15 @@
   "Country": "Kraj",
   "Number": "Numer",
   "Save": "Zapisz",
-  "Year and Month": "Rok i miesiąc"
+  "Year and Month": "Rok i miesiąc",
+  "Product Stock": "Stan produktu",
+  "Search product name": "Wyszukaj nazwę produktu",
+  "Image": "Zdjęcie",
+  "Product Name": "Nazwa produktu",
+  "Category": "Kategoria",
+  "Price": "Cena",
+  "Count": "Ilość",
+  "Available Color": "Dostępne kolory",
+  "Action": "Akcja",
+  "Add new product": "Dodaj nowy produkt"
 }
