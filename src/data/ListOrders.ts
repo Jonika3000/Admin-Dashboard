@@ -1,12 +1,16 @@
-import { Status } from '../utils/types.ts';
+import {Order, Status} from "../utils/types.ts";
 
-export const ListOrdersData = [
+export const ListOrdersData: Order[] = [
   {
     id: 1,
     name: 'Christine Brooks',
     address: '089 Kutch Green Apt. 448',
     date: new Date(2019, 1, 1),
     status: Status.Completed,
+    cost: 100.50,
+    zipCode: 12345,
+    country: 'USA',
+    number: '555-1234',
   },
   {
     id: 2,
@@ -14,6 +18,10 @@ export const ListOrdersData = [
     address: '979 Immanuel Ferry Suite 526',
     date: new Date(2019, 2, 1),
     status: Status.Processing,
+    cost: 75.00,
+    zipCode: 54321,
+    country: 'USA',
+    number: '555-5678',
   },
   {
     id: 3,
@@ -21,6 +29,10 @@ export const ListOrdersData = [
     address: '8587 Frida Ports',
     date: new Date(2019, 1, 3),
     status: Status.Rejected,
+    cost: 50.00,
+    zipCode: 67890,
+    country: 'USA',
+    number: '555-8765',
   },
   {
     id: 4,
@@ -28,6 +40,10 @@ export const ListOrdersData = [
     address: '089 Kutch Green Apt. 448',
     date: new Date(2019, 1, 1),
     status: Status.Completed,
+    cost: 120.75,
+    zipCode: 12345,
+    country: 'USA',
+    number: '555-1234',
   },
   {
     id: 5,
@@ -35,6 +51,10 @@ export const ListOrdersData = [
     address: '979 Immanuel Ferry Suite 526',
     date: new Date(2019, 2, 1),
     status: Status.Processing,
+    cost: 90.25,
+    zipCode: 54321,
+    country: 'USA',
+    number: '555-5678',
   },
   {
     id: 6,
@@ -42,5 +62,9 @@ export const ListOrdersData = [
     address: '8587 Frida Ports',
     date: new Date(2019, 1, 3),
     status: Status.Rejected,
+    cost: 60.00,
+    zipCode: 67890,
+    country: 'USA',
+    number: '555-8765',
   },
 ];

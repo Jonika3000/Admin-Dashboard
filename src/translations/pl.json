@@ -27,5 +27,12 @@
   "Filter By": "Filtruj według",
   "Order Status": "Status zamówienia",
   "Reset Filter": "Resetuj filtr",
-  "Status": "Status"
+  "Status": "Status",
+  "Name": "Imię",
+  "Address": "Adres",
+  "Cost": "Koszt",
+  "Zip Code": "Kod pocztowy",
+  "Country": "Kraj",
+  "Number": "Numer",
+  "Save": "Zapisz"
 }

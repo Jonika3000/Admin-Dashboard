@@ -15,6 +15,9 @@ import moment from 'moment';
 import { OrderStatus } from '../../../components/OrderStatus';
 import { colors } from '../../../theme.ts';
 import { useTranslation } from 'react-i18next';
+import {ModalOrderInfo} from "../ModalOrderInfo";
+import {useState} from "react";
+import {Order} from "../../../utils/types.ts";
 
 const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(18),
@@ -26,6 +29,13 @@ export const TableOrders = () => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
   const { t } = useTranslation();
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [selectedOrder, setSelectedOrder] = useState<Order>(ListOrdersData[0]);
+
+  const handleRowClick = (order: Order) => {
+    setSelectedOrder(order);
+    setOpenModal(true);
+  };
 
   return (
     <>
@@ -44,7 +54,8 @@ export const TableOrders = () => {
             <TableBody sx={{ backgroundColor: color.primary['500'], borderRadius: 15 }}>
               {ListOrdersData.map((row, index) => {
                 return (
-                  <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 }, height: 76, cursor: 'pointer' }}>
+                  <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 }, height: 76, cursor: 'pointer' }}
+                  onClick={()=>{handleRowClick(row)}}>
                     <TableCell align="center">{row.id}</TableCell>
                     <TableCell align="center">{row.name}</TableCell>
                     <TableCell align="center">{row.address}</TableCell>
@@ -59,6 +70,8 @@ export const TableOrders = () => {
           </Table>
         </TableContainer>
       </Box>
+      {/*modal order info*/}
+      {openModal && <ModalOrderInfo open={openModal} handleClose={()=>{setOpenModal(false)}} order={selectedOrder}/>}
     </>
   );
 };
