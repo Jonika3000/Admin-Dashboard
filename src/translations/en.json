@@ -66,5 +66,8 @@
   "Discount must be a positive number": "Discount must be a positive number",
   "Count must be a valid number": "Count must be a valid number",
   "Discount must be a valid number": "Discount must be a valid number",
-  "Price must be a valid number": "Price must be a valid number"
+  "Price must be a valid number": "Price must be a valid number",
+  "Team": "Team",
+  "Add employee": "Add employee",
+  "Delete": "Delete"
 }
