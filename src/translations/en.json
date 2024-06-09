@@ -50,5 +50,21 @@
   "Product Description": "Product Description",
   "Product Color": "Product Color",
   "Product Sizes": "Product Sizes",
-  "Upload Img": "Upload Img"
+  "Upload Img": "Upload Img",
+  "Pricing And Stock": "Pricing And Stock",
+  "Base Pricing": "Base Pricing",
+  "Stock": "Stock",
+  "Discount": "Discount",
+  "Images is required": "Images is required",
+  "Product name is required": "Product name is required",
+  "Price is required": "Price is required",
+  "Price must be a positive number": "Price must be a positive number",
+  "Count is required": "Count is required",
+  "Count must be an integer": "Count must be an integer",
+  "Count must be a positive number": "Count must be a positive number",
+  "Description is required": "Description is required",
+  "Discount must be a positive number": "Discount must be a positive number",
+  "Count must be a valid number": "Count must be a valid number",
+  "Discount must be a valid number": "Discount must be a valid number",
+  "Price must be a valid number": "Price must be a valid number"
 }

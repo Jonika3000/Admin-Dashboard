@@ -21,7 +21,7 @@ const MainLayout = () => {
           }}
           open={open}
         />
-        <Stack flexDirection="column" sx={{ flexGrow: 1 }}>
+        <Stack flexDirection="column" sx={{ flexGrow: 1, width: '100%' }}>
           {/*header*/}
           <Box sx={{ background: color.primary[500] }}>
             <Toolbar>

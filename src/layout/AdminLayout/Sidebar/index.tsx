@@ -10,7 +10,7 @@ export const Sidebar = ({ drawerToggle, open }: { drawerToggle: () => void; open
 
   return (
     <>
-      <Box component="nav" sx={{ width: open ? 240 : '0' }} aria-label="mailbox folders">
+      <Box component="nav" sx={{ width: open ? 270 : '0' }} aria-label="mailbox folders">
         <Drawer
           container={container}
           variant={matchMd ? 'persistent' : 'temporary'}

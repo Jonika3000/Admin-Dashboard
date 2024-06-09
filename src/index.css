@@ -25,3 +25,7 @@ body,
   outline: 1px solid slategrey;
   border-radius: 10px;
 }
+
+.error-message {
+  color: #A52A2A;
+}

@@ -51,7 +51,7 @@ export type ProductPost = {
   price: number;
   count: number;
   colors: string[];
-  size: Size;
+  sizes: Size[];
   description: string;
   discount: number;
 };
