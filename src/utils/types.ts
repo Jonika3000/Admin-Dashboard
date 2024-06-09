@@ -18,13 +18,12 @@ export type Order = {
 
 export type Product = {
   id: number;
-  image: string;
+  images: string[];
   productName: string;
   category: Category;
   price: number;
   count: number;
   colors: string[];
-  availableColor: string[];
   size: Size;
   description: string;
   discount: number;
@@ -43,3 +42,16 @@ export enum Size {
   XL = 'XL',
   XXL = 'XXL',
 }
+
+export type ProductPost = {
+  id: number;
+  images: File[] | null;
+  productName: string;
+  category: Category;
+  price: number;
+  count: number;
+  colors: string[];
+  size: Size;
+  description: string;
+  discount: number;
+};

@@ -1,14 +1,13 @@
-import { Product, Size } from '../../../utils/types.ts';
+import { ProductPost, Size } from '../../../utils/types.ts';
 
-export const defaultData: Product = {
+export const defaultData: ProductPost = {
   id: 0,
-  image: '',
+  images: null,
   productName: '',
   category: { id: 0, name: '' },
   price: 0,
   colors: [],
   count: 0,
-  availableColor: [''],
   size: Size.XS,
   description: '',
   discount: 0,

@@ -1,15 +1,12 @@
-import { Box, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { StatisticCard } from '../../components/Cards/StatisticCard';
-import { colors } from '../../theme.ts';
 import { StatisticCards } from '../../data/StatisticCards.ts';
 import React from 'react';
 import { StatisticChart } from '../../components/Charts/StatisticChart';
 
 const Dashboard = () => {
   const { t } = useTranslation();
-  const theme = useTheme();
-  const color = colors(theme.palette.mode);
 
   return (
     <>

@@ -47,7 +47,7 @@ export const TableProducts = () => {
                   >
                     <TableCell align="center">{row.id}</TableCell>
                     <TableCell align="center">
-                      <Box component={'img'} width={60} height={60} src={row.image} sx={{ objectFit: 'contain' }} />
+                      <Box component={'img'} width={60} height={60} src={row.images[0]} sx={{ objectFit: 'contain' }} />
                     </TableCell>
                     <TableCell align="center">{row.productName}</TableCell>
                     <TableCell align="center">{row.category.name}</TableCell>
@@ -55,7 +55,7 @@ export const TableProducts = () => {
                     <TableCell align="center">{row.count}</TableCell>
                     <TableCell align="center">
                       <Stack flexDirection="row" gap={1} width="100%" justifyContent="center">
-                        {row.availableColor.map((color, index) => {
+                        {row.colors.map((color, index) => {
                           return (
                             <Box
                               key={index}
