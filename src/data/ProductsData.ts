@@ -1,4 +1,4 @@
-import {Product, Size} from '../utils/types.ts';
+import { Product, Size } from '../utils/types.ts';
 
 export const ProductsData: Product[] = [
   {
@@ -39,7 +39,8 @@ export const ProductsData: Product[] = [
   },
   {
     id: 4,
-    image: 'https://i5.walmartimages.com/seo/Restored-Samsung-Galaxy-S21-5G-128GB-G991U-Fully-Unlocked-Smartphone-Refurbished_dcf28e36-4c71-49d1-931b-4649b866db89.22d7e2d5e09fe373b2541876b509ebfb.jpeg',
+    image:
+      'https://i5.walmartimages.com/seo/Restored-Samsung-Galaxy-S21-5G-128GB-G991U-Fully-Unlocked-Smartphone-Refurbished_dcf28e36-4c71-49d1-931b-4649b866db89.22d7e2d5e09fe373b2541876b509ebfb.jpeg',
     productName: 'Samsung Galaxy S21',
     category: { id: 1, name: 'Smartphone' },
     price: 800,

@@ -9,7 +9,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
 const OrdersList = React.lazy(() => import('./pages/OrdersList/index.tsx'));
 const Products = React.lazy(() => import('./pages/Products/index.tsx'));
-const AddProduct = React.lazy(()=>import('./pages/AddProduct/index.tsx'));
+const AddProduct = React.lazy(() => import('./pages/AddProduct/index.tsx'));
 
 function App() {
   const { theme, toggleColorMode } = useMode();

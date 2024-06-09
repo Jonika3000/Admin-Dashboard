@@ -23,6 +23,7 @@ export type Product = {
   category: Category;
   price: number;
   count: number;
+  colors: string[];
   availableColor: string[];
   size: Size;
   description: string;
@@ -32,13 +33,13 @@ export type Product = {
 export type Category = {
   id: number;
   name: string;
-}
+};
 
 export enum Size {
-  XS = "XS",
-  S = "S",
-  M = "M",
-  L = "L",
-  XL = "XL",
-  XXL = "XXL"
+  XS = 'XS',
+  S = 'S',
+  M = 'M',
+  L = 'L',
+  XL = 'XL',
+  XXL = 'XXL',
 }
