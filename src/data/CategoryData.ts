@@ -1,3 +1,1 @@
-export const CategoryData = [
-    "Сlothes", "Technique", "Books", "Products"
-]
+export const CategoryData = ['Сlothes', 'Technique', 'Books', 'Products'];

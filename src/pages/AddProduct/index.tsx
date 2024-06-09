@@ -4,7 +4,7 @@ import { Form, Formik } from 'formik';
 import { defaultData } from './FormAddProduct/default-data.ts';
 import { ProductPost } from '../../utils/types.ts';
 import { FormAddProduct } from './FormAddProduct';
-import {validationSchema} from "./FormAddProduct/validation-schema.ts";
+import { validationSchema } from './FormAddProduct/validation-schema.ts';
 
 const AddProduct = () => {
   const { t } = useTranslation();
@@ -26,7 +26,7 @@ const AddProduct = () => {
                 <Typography variant="h2" fontWeight={600}>
                   {t('Add new product')}
                 </Typography>
-                <Button color="info" size="medium" variant="contained" type='submit' sx={{ marginLeft: 2 }}>
+                <Button color="info" size="medium" variant="contained" type="submit" sx={{ marginLeft: 2 }}>
                   <Typography variant="h6">{t('Add product')}</Typography>
                 </Button>
               </Stack>

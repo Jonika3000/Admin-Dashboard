@@ -1,23 +1,14 @@
-import {
-  Box,
-  Grid,
-  NativeSelect,
-  OutlinedInput,
-  Stack,
-  TextField,
-  Typography,
-  useTheme
-} from '@mui/material';
+import { Box, Grid, NativeSelect, OutlinedInput, Stack, TextField, Typography, useTheme } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { colors } from '../../../theme.ts';
-import {ErrorMessage, useFormikContext} from 'formik';
+import { ErrorMessage, useFormikContext } from 'formik';
 import { ProductPost } from '../../../utils/types.ts';
 import { StyledOutlinedInput } from '../../../components/StyledOutlinedInput';
 import { ColorPicker } from '../../../components/ColorPicker';
 import { SizePicker } from '../../../components/SizePicker';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import React, { useState } from 'react';
-import {CategoryData} from "../../../data/CategoryData.ts";
+import { CategoryData } from '../../../data/CategoryData.ts';
 
 export const FormAddProduct = () => {
   const { t } = useTranslation();
@@ -48,7 +39,7 @@ export const FormAddProduct = () => {
   };
 
   const handleCategoryChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    formik.setFieldValue('category',event.target.value);
+    formik.setFieldValue('category', event.target.value);
   };
 
   return (
@@ -56,7 +47,7 @@ export const FormAddProduct = () => {
       <Grid container spacing={2} mt={3} ml={1} width="100%" justifyContent={'space-between'}>
         <Grid container gap={1} justifyContent={'space-between'}>
           {/*General Information*/}
-          <Grid item sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5 }} xs={12}  sm={5} md={7}>
+          <Grid item sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5 }} xs={12} sm={5} md={7}>
             <Stack flexDirection="column" gap={2}>
               <Typography variant="h4" mb={1}>
                 {t('General Information')}
@@ -69,11 +60,7 @@ export const FormAddProduct = () => {
                 name="productName"
                 inputProps={{ 'aria-label': 'weight', sx: { pl: 0.5 } }}
               />
-              <ErrorMessage
-                  name="productName"
-                  component="label"
-                  className="error-message"
-              />
+              <ErrorMessage name="productName" component="label" className="error-message" />
               <Typography variant="h5">{t('Product Description')}</Typography>
               <TextField
                 placeholder={t('Product Description')}
@@ -89,29 +76,17 @@ export const FormAddProduct = () => {
                 }}
                 maxRows={7}
               />
-              <ErrorMessage
-                  name="description"
-                  component="label"
-                  className="error-message"
-              />
+              <ErrorMessage name="description" component="label" className="error-message" />
               <Typography variant="h5">{t('Product Color')}</Typography>
               <ColorPicker onColorChange={colorsChange} />
-              <ErrorMessage
-                  name="colors"
-                  component="label"
-                  className="error-message"
-              />
+              <ErrorMessage name="colors" component="label" className="error-message" />
               <Typography variant="h5">{t('Product Sizes')}</Typography>
               <SizePicker onSizeChange={sizesChange} />
-              <ErrorMessage
-                  name="sizes"
-                  component="label"
-                  className="error-message"
-              />
+              <ErrorMessage name="sizes" component="label" className="error-message" />
             </Stack>
           </Grid>
           {/*Photos*/}
-          <Grid item sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5 }} xs={12}  sm={5} md={4}>
+          <Grid item sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5 }} xs={12} sm={5} md={4}>
             <Typography variant="h4">{t('Upload Img')}</Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 1 }}>
               <Box
@@ -157,17 +132,18 @@ export const FormAddProduct = () => {
                 />
               ))}
             </Stack>
-            <ErrorMessage
-                name="images"
-                component="label"
-                className="error-message"
-            />
+            <ErrorMessage name="images" component="label" className="error-message" />
           </Grid>
         </Grid>
         {/*Pricing And Stock*/}
-        <Grid item xs={12} md={7} mt={1} sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5, flexDirection: 'column', gap: 1 }}>
-          <Stack
-          >
+        <Grid
+          item
+          xs={12}
+          md={7}
+          mt={1}
+          sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5, flexDirection: 'column', gap: 1 }}
+        >
+          <Stack>
             <Typography variant="h4" mb={1}>
               {t('Pricing And Stock')}
             </Typography>
@@ -177,49 +153,43 @@ export const FormAddProduct = () => {
               sx={{ height: '38px', borderRadius: 19, backgroundColor: colors(theme.palette.mode).primary[400] }}
               onChange={formik.handleChange}
             />
-            <ErrorMessage
-                name="price"
-                component="label"
-                className="error-message"
-            />
+            <ErrorMessage name="price" component="label" className="error-message" />
             <Typography variant="h5">{t('Stock')}</Typography>
             <OutlinedInput
               name="count"
               sx={{ height: '38px', borderRadius: 19, backgroundColor: colors(theme.palette.mode).primary[400] }}
               onChange={formik.handleChange}
             />
-            <ErrorMessage
-                name="count"
-                component="label"
-                className="error-message"
-            />
+            <ErrorMessage name="count" component="label" className="error-message" />
             <Typography variant="h5">{t('Discount')}</Typography>
             <OutlinedInput
               name="discount"
               sx={{ height: '38px', borderRadius: 19, backgroundColor: colors(theme.palette.mode).primary[400] }}
               onChange={formik.handleChange}
             />
-            <ErrorMessage
-                name="discount"
-                component="label"
-                className="error-message"
-            />
+            <ErrorMessage name="discount" component="label" className="error-message" />
           </Stack>
         </Grid>
-        <Grid item xs={12} md={4} mt={1} sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5, flexDirection: 'column', gap: 1 }}>
+        <Grid
+          item
+          xs={12}
+          md={4}
+          mt={1}
+          sx={{ padding: 2, backgroundColor: color.primary[500], borderRadius: 5, flexDirection: 'column', gap: 1 }}
+        >
           <Typography variant="h4" mb={1}>
             {t('Category')}
           </Typography>
-          <NativeSelect value={formik.values.category} onChange={handleCategoryChange} sx={{width: '100%'}}>
-            {CategoryData.map((category, index)=> {
-             return <option value={category} key={index}>{category}</option>
+          <NativeSelect value={formik.values.category} onChange={handleCategoryChange} sx={{ width: '100%' }}>
+            {CategoryData.map((category, index) => {
+              return (
+                <option value={category} key={index}>
+                  {category}
+                </option>
+              );
             })}
           </NativeSelect>
-          <ErrorMessage
-              name="category"
-              component="label"
-              className="error-message"
-          />
+          <ErrorMessage name="category" component="label" className="error-message" />
         </Grid>
       </Grid>
     </>

@@ -10,6 +10,7 @@ const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
 const OrdersList = React.lazy(() => import('./pages/OrdersList/index.tsx'));
 const Products = React.lazy(() => import('./pages/Products/index.tsx'));
 const AddProduct = React.lazy(() => import('./pages/AddProduct/index.tsx'));
+const TeamPage = React.lazy(() => import('./pages/Team/index.tsx'));
 
 function App() {
   const { theme, toggleColorMode } = useMode();
@@ -26,6 +27,7 @@ function App() {
                 <Route path={'orders'} element={<OrdersList />}></Route>
                 <Route path={'products'} element={<Products />}></Route>
                 <Route path={'add-product'} element={<AddProduct />}></Route>
+                <Route path={'team'} element={<TeamPage />}></Route>
               </Route>
             </Routes>
           </LocalizationProvider>
