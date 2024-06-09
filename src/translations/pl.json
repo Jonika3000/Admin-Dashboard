@@ -66,5 +66,10 @@
   "Discount must be a positive number": "Rabat musi być liczbą dodatnią",
   "Count must be a valid number": "Liczba musi być prawidłową liczbą",
   "Discount must be a valid number": "Rabat musi być prawidłową liczbą",
-  "Price must be a valid number": "Cena musi być prawidłową liczbą"
+  "Price must be a valid number": "Cena musi być prawidłową liczbą",
+  "Team": "Zespół",
+  "Add employee": "Dodaj pracownika",
+  "Delete": "Usuń",
+  "Old password": "Stare hasło",
+  "New password": "Nowe hasło"
 }

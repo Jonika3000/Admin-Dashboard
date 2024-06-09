@@ -69,5 +69,8 @@
   "Price must be a valid number": "Price must be a valid number",
   "Team": "Team",
   "Add employee": "Add employee",
-  "Delete": "Delete"
+  "Delete": "Delete",
+  "Email": "Email",
+  "Old password": "Old password",
+  "New password": "New password"
 }

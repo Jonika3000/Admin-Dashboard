@@ -62,3 +62,10 @@ export type Employee = {
   position: string;
   email: string;
 };
+
+export type Profile = {
+  photo: File|null;
+  name: string;
+  position: string;
+  email: string;
+};

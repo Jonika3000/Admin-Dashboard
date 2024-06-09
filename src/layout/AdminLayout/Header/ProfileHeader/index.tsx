@@ -18,6 +18,7 @@ import { colors } from '../../../../theme.ts';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useTranslation } from 'react-i18next';
 import PersonIcon from '@mui/icons-material/Person';
+import { useNavigate } from 'react-router-dom';
 
 const userAvatarUrl =
   'https://cdn.britannica.com/53/252953-050-30D00122/Mickey-Mouse-Steamboat-Willie-Walt-Disney-Public-Domain.jpg?w=500';
@@ -28,6 +29,7 @@ export const ProfileHeader = () => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const handleClickAway = (event: any) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
