@@ -5,6 +5,7 @@ import AdminLayout from './layout/AdminLayout';
 import React from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers';
+import {Loading} from "./pages/Loading";
 
 const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
 const OrdersList = React.lazy(() => import('./pages/OrdersList/index.tsx'));
@@ -20,7 +21,7 @@ function App() {
     <ThemeModeContext.Provider value={{ theme, toggleColorMode }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <React.Suspense fallback={<>...</>}>
+        <React.Suspense fallback={<Loading/>}>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Routes>
               <Route path={'/'} element={<AdminLayout />}>
