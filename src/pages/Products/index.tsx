@@ -24,7 +24,7 @@ const Products = () => {
           <Typography variant="h2" fontWeight={600}>
             {t('Product Stock')}
           </Typography>
-          <Box>
+          <Box display="flex" gap={1} flexWrap="wrap">
             <SearchProduct />
             <Button
               color="info"

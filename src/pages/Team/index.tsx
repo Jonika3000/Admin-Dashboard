@@ -19,7 +19,7 @@ const Team = () => {
             color="info"
             size="medium"
             variant="contained"
-            sx={{ marginLeft: 2 }}
+            sx={{ marginLeft: 2, maxHeight: 40 }}
             onClick={() => {
               navigate('/add-employee');
             }}

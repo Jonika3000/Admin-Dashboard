@@ -1,12 +1,14 @@
 import { Box, Drawer, List, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { MenuList } from './MenuList';
 import { colors } from '../../../theme.ts';
+import { useNavigate } from 'react-router-dom';
 
 export const Sidebar = ({ drawerToggle, open }: { drawerToggle: () => void; open: boolean }) => {
   const theme = useTheme();
   const matchMd = useMediaQuery(theme.breakpoints.up('md'));
   const container = document.body;
   const color = colors(theme.palette.mode);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -27,7 +29,16 @@ export const Sidebar = ({ drawerToggle, open }: { drawerToggle: () => void; open
           }}
           ModalProps={{ keepMounted: true }}
         >
-          <Typography variant={'h1'} fontFamily={'Lily Script One'} textAlign={'center'} mb={2}>
+          <Typography
+            onClick={() => {
+              navigate('/dashboard');
+            }}
+            variant={'h1'}
+            fontFamily={'Lily Script One'}
+            sx={{ cursor: 'pointer' }}
+            textAlign={'center'}
+            mb={2}
+          >
             J
           </Typography>
           <List>
