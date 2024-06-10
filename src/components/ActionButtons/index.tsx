@@ -2,10 +2,13 @@ import { Box, Button, useTheme } from '@mui/material';
 import { colors } from '../../theme.ts';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useState } from 'react';
+import { ModalDeleteConfirm } from '../ModalDeleteConfirm';
 
 export const ActionButtons = () => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
+  const [modalDeleteOpen, setModalDeleteOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -35,10 +38,14 @@ export const ActionButtons = () => {
             height: 30,
             borderRight: 0,
           }}
+          onClick={() => {
+            setModalDeleteOpen(true);
+          }}
         >
           <DeleteIcon sx={{ color: '#EF3826' }} />
         </Button>
       </Box>
+      <ModalDeleteConfirm open={modalDeleteOpen} setClose={() => setModalDeleteOpen(false)} />
     </>
   );
 };
