@@ -8,6 +8,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { Loading } from './pages/Loading';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Error } from './pages/Error';
+import {NotFound} from "./pages/NotFound";
 
 const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
 const OrdersList = React.lazy(() => import('./pages/OrdersList/index.tsx'));
@@ -28,13 +29,14 @@ function App() {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <Routes>
                 <Route path={'/'} element={<AdminLayout />}>
-                  <Route path={'dashboard'} element={<Dashboard />}></Route>
-                  <Route path={'orders'} element={<OrdersList />}></Route>
-                  <Route path={'products'} element={<Products />}></Route>
-                  <Route path={'add-product'} element={<AddProduct />}></Route>
-                  <Route path={'team'} element={<TeamPage />}></Route>
-                  <Route path={'profile'} element={<Profile />}></Route>
+                  <Route path={'dashboard'} element={<Dashboard />}/>
+                  <Route path={'orders'} element={<OrdersList />}/>
+                  <Route path={'products'} element={<Products />}/>
+                  <Route path={'add-product'} element={<AddProduct />}/>
+                  <Route path={'team'} element={<TeamPage />}/>
+                  <Route path={'profile'} element={<Profile />}/>
                 </Route>
+                <Route path={'*'} element={<NotFound/>}/>
               </Routes>
             </LocalizationProvider>
           </React.Suspense>
