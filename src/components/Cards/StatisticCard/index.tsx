@@ -67,9 +67,7 @@ export const StatisticCard = ({
               <TrendingDownIcon sx={{ color: '#F93C65' }} />
             )}
             <Typography sx={{ color: statisticUp ? '#00B69B' : '#F93C65' }}>{statisticPercent}</Typography>
-            <Typography fontWeight={600}>
-              {statisticUp ? t('Up') : t('Down')} {statisticTime}
-            </Typography>
+            <Typography fontWeight={600}>{t(statisticTime)}</Typography>
           </Stack>
         </CardContent>
       </Card>

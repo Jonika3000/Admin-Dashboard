@@ -25,7 +25,7 @@ export const ActionButtons = () => {
             height: 30,
           }}
         >
-          <EditNoteIcon sx={{ color: color.primary[0] }} />
+          <EditNoteIcon sx={{ color: theme.palette.mode === 'dark' ? 'white' : 'black' }} />
         </Button>
         <Button
           sx={{

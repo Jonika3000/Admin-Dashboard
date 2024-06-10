@@ -31,8 +31,10 @@ export const LanguageSelector = () => {
     setOpen(false);
   };
   const handleChangeLanguage = () => {
-    if (selectedLanguage === 'en') i18n.changeLanguage('pl');
-    else i18n.changeLanguage('en');
+    const language = selectedLanguage === 'en' ? 'pl' : 'en';
+    i18n.changeLanguage(language);
+    localStorage.setItem('lng', language);
+    setOpen(false);
   };
 
   return (

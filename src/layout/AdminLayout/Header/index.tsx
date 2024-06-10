@@ -31,7 +31,7 @@ export const Header = ({ collapseClick }: { collapseClick: () => void }) => {
         }}
       >
         <Button sx={{ overflow: 'hidden' }} onClick={collapseClick}>
-          <MenuIcon sx={{ color: color.primary[0] }} />
+          <MenuIcon sx={{ color: theme.palette.mode === 'dark' ? 'white' : 'black' }} />
         </Button>
       </Box>
       {/*search*/}

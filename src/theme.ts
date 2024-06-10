@@ -74,7 +74,7 @@ export const colors = (mode: PaletteMode) => {
           200: '#D5D5D5',
           300: '#B9B9B9',
           400: '#F4F4F4',
-          500: '#F4F4F4',
+          500: '#cacdde',
           600: '#F5F6FA',
           700: '#B9B9B9',
           800: '#2D2D2D',
