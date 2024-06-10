@@ -1,9 +1,16 @@
-import { Button, Stack, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
-import {Formik} from "formik";
+import { Stack } from '@mui/material';
+import { Form, Formik } from 'formik';
+import { defaultData } from './FormProfile/default-data.ts';
+import { ProfilePost } from '../../utils/types.ts';
+import { FormProfile } from './FormProfile';
+import {validationSchema} from "./FormProfile/validationSchema.ts";
 
 const Profile = () => {
-  const { t } = useTranslation();
+
+  const onSubmit = (data: ProfilePost) => {
+    console.log(data);
+  };
+
   return (
     <>
       <Stack
@@ -15,12 +22,11 @@ const Profile = () => {
         gap={3}
         flexWrap="wrap"
       >
-          <Formik initialValues={} onSubmit={}>
-
-          </Formik>
-        <Button color="info" size="medium" variant="contained">
-          <Typography variant="h6">{t('Save')}</Typography>
-        </Button>
+        <Formik initialValues={defaultData} validationSchema={validationSchema} onSubmit={onSubmit}>
+          <Form>
+            <FormProfile />
+          </Form>
+        </Formik>
       </Stack>
     </>
   );

@@ -82,7 +82,7 @@ export const ProfileHeader = () => {
         <Paper sx={{ backgroundColor: color.primary[600] }}>
           <ClickAwayListener onClickAway={handleClickAway}>
             <List>
-              <ListItemButton sx={{ borderRadius: '10px' }}>
+              <ListItemButton sx={{ borderRadius: '10px' }} onClick={() => navigate('/profile')}>
                 <ListItemIcon>
                   <PersonIcon />
                 </ListItemIcon>

@@ -64,8 +64,17 @@ export type Employee = {
 };
 
 export type Profile = {
-  photo: File|null;
+  photo: string;
   name: string;
   position: string;
   email: string;
+};
+
+export type ProfilePost = {
+  photo: File | null;
+  name?: string;
+  position?: string;
+  email?: string;
+  currentPassword?: string;
+  newPassword?: string;
 };
