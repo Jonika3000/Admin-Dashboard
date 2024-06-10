@@ -2,11 +2,14 @@ import { Avatar, Box, Button, Stack, Typography, useTheme } from '@mui/material'
 import { Employee } from '../../../utils/types.ts';
 import { colors } from '../../../theme.ts';
 import { useTranslation } from 'react-i18next';
+import { ModalDeleteConfirm } from '../../../components/ModalDeleteConfirm';
+import { useState } from 'react';
 
 export const EmployeeCard = ({ employee }: { employee: Employee }) => {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
   const { t } = useTranslation();
+  const [modalDeleteOpen, setModalDeleteOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -26,13 +29,12 @@ export const EmployeeCard = ({ employee }: { employee: Employee }) => {
           </Typography>
           <Typography variant="h5">{employee.position}</Typography>
           <Typography variant="h5">{employee.email}</Typography>
-          <Button variant="contained" sx={{ backgroundColor: '#A52A2A'}}>
-            <Typography variant="h5">
-              {t('Delete')}
-            </Typography>
+          <Button variant="contained" sx={{ backgroundColor: '#A52A2A' }} onClick={() => setModalDeleteOpen(true)}>
+            <Typography variant="h5">{t('Delete')}</Typography>
           </Button>
         </Stack>
       </Box>
+      <ModalDeleteConfirm open={modalDeleteOpen} setClose={() => setModalDeleteOpen(false)} />
     </>
   );
 };

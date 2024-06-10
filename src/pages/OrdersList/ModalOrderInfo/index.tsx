@@ -4,16 +4,7 @@ import { colors } from '../../../theme.ts';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import moment from 'moment';
-const styleModal = (theme: any) => ({
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  p: 4,
-  bgcolor: colors(theme.palette.mode).primary[500],
-  borderRadius: 2,
-});
+import { styleModal } from '../../../components/StyledModal';
 
 export const ModalOrderInfo = ({
   open,
