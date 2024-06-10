@@ -12,7 +12,7 @@ export const EmployeeCard = ({ employee }: { employee: Employee }) => {
     <>
       <Box
         sx={{
-          backgroundColor: color.primary[400],
+          backgroundColor: color.primary[500],
           width: '100%',
           height: '100%',
           borderRadius: 10,
@@ -26,8 +26,8 @@ export const EmployeeCard = ({ employee }: { employee: Employee }) => {
           </Typography>
           <Typography variant="h5">{employee.position}</Typography>
           <Typography variant="h5">{employee.email}</Typography>
-          <Button variant="contained">
-            <Typography variant="h5" sx={{ color: '#A52A2A' }}>
+          <Button variant="contained" sx={{ backgroundColor: '#A52A2A'}}>
+            <Typography variant="h5">
               {t('Delete')}
             </Typography>
           </Button>

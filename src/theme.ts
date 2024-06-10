@@ -229,12 +229,13 @@ export const ThemeModeContext = createContext<{
 });
 
 export const useMode = () => {
-  const [mode, setMode] = useState<PaletteMode>('dark');
+  const themeMode = localStorage.getItem('theme') as PaletteMode | null;
+  const [mode, setMode] = useState<PaletteMode>(themeMode ?? 'dark');
 
   const toggleColorMode = () => {
     setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
+    localStorage.setItem('theme', mode === 'light' ? 'dark' : 'light');
   };
-
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
   return { theme, toggleColorMode };

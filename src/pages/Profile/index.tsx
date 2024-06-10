@@ -3,10 +3,9 @@ import { Form, Formik } from 'formik';
 import { defaultData } from './FormProfile/default-data.ts';
 import { ProfilePost } from '../../utils/types.ts';
 import { FormProfile } from './FormProfile';
-import {validationSchema} from "./FormProfile/validationSchema.ts";
+import { validationSchema } from './FormProfile/validationSchema.ts';
 
 const Profile = () => {
-
   const onSubmit = (data: ProfilePost) => {
     console.log(data);
   };
