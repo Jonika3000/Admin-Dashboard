@@ -5,7 +5,9 @@ import AdminLayout from './layout/AdminLayout';
 import React from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import {Loading} from "./pages/Loading";
+import { Loading } from './pages/Loading';
+import { ErrorBoundary } from 'react-error-boundary';
+import { Error } from './pages/Error';
 
 const Dashboard = React.lazy(() => import('./pages/Dashboard/index.tsx'));
 const OrdersList = React.lazy(() => import('./pages/OrdersList/index.tsx'));
@@ -18,25 +20,27 @@ function App() {
   const { theme, toggleColorMode } = useMode();
 
   return (
-    <ThemeModeContext.Provider value={{ theme, toggleColorMode }}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <React.Suspense fallback={<Loading/>}>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <Routes>
-              <Route path={'/'} element={<AdminLayout />}>
-                <Route path={'dashboard'} element={<Dashboard />}></Route>
-                <Route path={'orders'} element={<OrdersList />}></Route>
-                <Route path={'products'} element={<Products />}></Route>
-                <Route path={'add-product'} element={<AddProduct />}></Route>
-                <Route path={'team'} element={<TeamPage />}></Route>
-                <Route path={'profile'} element={<Profile />}></Route>
-              </Route>
-            </Routes>
-          </LocalizationProvider>
-        </React.Suspense>
-      </ThemeProvider>
-    </ThemeModeContext.Provider>
+    <ErrorBoundary fallback={<Error />}>
+      <ThemeModeContext.Provider value={{ theme, toggleColorMode }}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <React.Suspense fallback={<Loading />}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <Routes>
+                <Route path={'/'} element={<AdminLayout />}>
+                  <Route path={'dashboard'} element={<Dashboard />}></Route>
+                  <Route path={'orders'} element={<OrdersList />}></Route>
+                  <Route path={'products'} element={<Products />}></Route>
+                  <Route path={'add-product'} element={<AddProduct />}></Route>
+                  <Route path={'team'} element={<TeamPage />}></Route>
+                  <Route path={'profile'} element={<Profile />}></Route>
+                </Route>
+              </Routes>
+            </LocalizationProvider>
+          </React.Suspense>
+        </ThemeProvider>
+      </ThemeModeContext.Provider>
+    </ErrorBoundary>
   );
 }
 

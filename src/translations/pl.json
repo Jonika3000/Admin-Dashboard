@@ -71,5 +71,7 @@
   "Add employee": "Dodaj pracownika",
   "Delete": "Usuń",
   "Old password": "Stare hasło",
-  "New password": "Nowe hasło"
+  "New password": "Nowe hasło",
+  "Something went wrong": "Coś poszło nie tak",
+  "Back home": "Powrót do domu"
 }
