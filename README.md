@@ -11,6 +11,7 @@ Material UI Admin Dashboard template built with React. This is a complete admin 
 ## Technology Stack
 
 * React v18.3.1
+* Vite
 * Material UI V5
 * Built with React Hooks API
 * Formik
